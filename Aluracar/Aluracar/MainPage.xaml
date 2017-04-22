@@ -4,30 +4,19 @@
              xmlns:local="clr-namespace:Aluracar"
              x:Class="Aluracar.MainPage">
 
-    <Grid VerticalOptions="Start">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Text="Trump / Pence"></Label>
-        <Label Grid.Column="1" Grid.Row="0"  Text="62.829.410"></Label>
-        <Label Grid.Column="2" Grid.Row="0"  Text="46,10%"></Label>
-        <Label Grid.Column="0" Grid.Row="1" Text="Clinton / Kaine"></Label>
-        <Label Grid.Column="1" Grid.Row="1"  Text="65.483.780"></Label>
-        <Label Grid.Column="2" Grid.Row="1"  Text="48,05%"></Label>
-        <Label Grid.Column="0" Grid.Row="2" Text="Johnson / Weld"></Label>
-        <Label Grid.Column="1" Grid.Row="2"  Text="4.476.220"></Label>
-        <Label Grid.Column="2" Grid.Row="2"  Text="3,28%"></Label>
-        <Label Grid.Column="0" Grid.Row="3" Text="Stein / Baraka"></Label>
-        <Label Grid.Column="1" Grid.Row="3"  Text="1.449.726"></Label>
-        <Label Grid.Column="2" Grid.Row="3"  Text="1,06%"></Label>
-    </Grid>
+    <StackLayout>
+        <ListView x:Name="listViewCarros" ItemsSource="{Binding Veiculos}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="10" Orientation="Horizontal">
+                            <Label Text="Veiculo: {Binding Nome}" />
+                            <Label Text="Preço: {Binding Valor}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 
 </ContentPage>

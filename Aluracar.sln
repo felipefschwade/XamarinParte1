@@ -16,6 +16,7 @@ Global
 		Aluracar\Aluracar\Aluracar.projitems*{03a0c92c-230e-44b8-bf0e-094867628ac3}*SharedItemsImports = 4
 		Aluracar\Aluracar\Aluracar.projitems*{09f4b6c3-2bce-4cd2-8c9f-2b6dc96d7e65}*SharedItemsImports = 13
 		Aluracar\Aluracar\Aluracar.projitems*{6df9e579-38f3-4d7a-98ef-1cb12109e961}*SharedItemsImports = 4
+		Aluracar\Aluracar\Aluracar.projitems*{f9a62586-f8ec-400f-91d9-e92aa6b6fbde}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
