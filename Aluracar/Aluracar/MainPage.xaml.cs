@@ -23,5 +23,13 @@ namespace Aluracar
             };
             BindingContext = this;
         }
-	}
+
+        private async void listViewCarros_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var veiculo = e.Item as Carro;
+            await DisplayAlert("Veiculo Selecionado", 
+                String.Format("Você selecionou o veiculo: {0} de valor: {1}", veiculo.Nome, veiculo.PrecoFormatado),
+                "Ok");
+        }
+    }
 }

@@ -8,5 +8,12 @@ namespace Aluracar.Model
     {
         public string Nome { get; set; }
         public decimal Valor { get; set; }
+        public string PrecoFormatado
+        {
+            get
+            {
+                return String.Format("R$ {0}", Valor);
+            }
+        }
     }
 }
