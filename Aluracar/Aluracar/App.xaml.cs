@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aluracar.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Aluracar
 		{
 			InitializeComponent();
 
-			MainPage = new Aluracar.MainPage();
+            MainPage = new NavigationPage(new ListagemView());
 		}
 
 		protected override void OnStart ()

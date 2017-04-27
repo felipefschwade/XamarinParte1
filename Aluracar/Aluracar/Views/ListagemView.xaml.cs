@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Aluracar
+namespace Aluracar.Views
 {
-	public partial class MainPage : ContentPage
+	public partial class ListagemView : ContentPage
 	{
         public IList<Carro> Veiculos { get; set; }
 
-        public MainPage()
+        public ListagemView()
 		{
 			InitializeComponent();
             Veiculos = new List<Carro>()
@@ -27,9 +27,7 @@ namespace Aluracar
         private async void listViewCarros_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var veiculo = e.Item as Carro;
-            await DisplayAlert("Veiculo Selecionado", 
-                String.Format("Você selecionou o veiculo: {0} de valor: {1}", veiculo.Nome, veiculo.PrecoFormatado),
-                "Ok");
+            Navigation.PushAsync(new DetalhesView(veiculo));
         }
     }
 }
